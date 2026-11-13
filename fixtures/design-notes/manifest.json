@@ -1,0 +1,36 @@
+{
+  "slug": "design-notes",
+  "title": "设计手记",
+  "topic": "设计",
+  "description": "Atom 1.0 演示源：稳定 id、正文修订、改标题但正文不变、缺少标识。",
+  "default_version": "v1",
+  "versions": [
+    {
+      "id": "v1",
+      "label": "v1 · 初始两篇",
+      "file": "v1.xml",
+      "etag": "\"design-notes-v1\"",
+      "last_modified": "Wed, 04 Nov 2026 03:00:00 GMT",
+      "status": 200,
+      "notes": "Atom 条目，均带 <id>。"
+    },
+    {
+      "id": "v2",
+      "label": "v2 · 正文与标题各改一篇",
+      "file": "v2.xml",
+      "etag": "\"design-notes-v2\"",
+      "last_modified": "Sat, 14 Nov 2026 02:30:00 GMT",
+      "status": 200,
+      "notes": "interaction 条目正文追加一段；typography 条目只改标题，正文不变。"
+    },
+    {
+      "id": "v3",
+      "label": "v3 · 新增无 id 条目",
+      "file": "v3.xml",
+      "etag": "\"design-notes-v3\"",
+      "last_modified": "Sat, 14 Nov 2026 05:00:00 GMT",
+      "status": 200,
+      "notes": "新增一条只有链接、没有 <id> 的条目，用于观察链接回退标识。"
+    }
+  ]
+}

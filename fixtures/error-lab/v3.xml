@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>故障实验室</title>
+    <link>https://errors.example.net/</link>
+    <description>坏条目与健康条目并存</description>
+    <item>
+      <title>日期写成中文的条目</title>
+      <link>https://errors.example.net/bad-date.html</link>
+      <guid>err-bad-date</guid>
+      <pubDate>2026年11月11日 星期三</pubDate>
+      <description><![CDATA[<p>日期完全无法解析，不应该被当成今天。</p>]]></description>
+    </item>
+    <item>
+      <title>正文为空的条目</title>
+      <link>https://errors.example.net/empty-body.html</link>
+      <guid>err-empty</guid>
+      <pubDate>Wed, 11 Nov 2026 05:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>一次真实的限流事故</title>
+      <link>https://errors.example.net/rate-limit.html</link>
+      <guid>err-healthy</guid>
+      <pubDate>Thu, 13 Nov 2026 02:30:00 GMT</pubDate>
+      <description><![CDATA[<p>这条条目一切正常，应该出现在文章列表里，不应受到同源其他坏条目的影响。</p>
+<p>限流阈值设置得过低时，突发流量会被集中拒绝，反而放大了延迟。</p>]]></description>
+    </item>
+  </channel>
+</rss>

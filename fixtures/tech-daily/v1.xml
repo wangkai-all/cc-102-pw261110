@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术日报</title>
+    <link>https://tech.example.com/</link>
+    <description>工程实践与系统设计</description>
+    <language>zh-cn</language>
+    <atom:updated>2026-11-03T02:00:00+08:00</atom:updated>
+    <item>
+      <title>调度器的三个反直觉细节</title>
+      <link>https://tech.example.com/2026/11/scheduler-old.html</link>
+      <guid isPermaLink="false">tech-2026-a</guid>
+      <pubDate>Mon, 02 Nov 2026 01:30:00 GMT</pubDate>
+      <atom:updated>2026-11-02T09:30:00+08:00</atom:updated>
+      <description><![CDATA[<p>第一个细节：队列长度不是负载，等待时间才是。我们曾经用队列长度做告警阈值，结果在一次下游超时中完全没有触发。</p>
+<p>第二个细节：优先级反转往往来自锁，而不是来自优先级本身。</p>
+<p>第三个细节：限流器放在入口还是放在出口，决定了过载时谁先被牺牲。</p>]]></description>
+    </item>
+    <item>
+      <title>用 SQLite 做事件存储</title>
+      <link>https://tech.example.com/2026/11/sqlite-events.html</link>
+      <guid isPermaLink="false">tech-2026-b</guid>
+      <pubDate>Tue, 03 Nov 2026 03:15:00 GMT</pubDate>
+      <atom:updated>2026-11-03T11:15:00+08:00</atom:updated>
+      <description><![CDATA[<p>单文件、事务、WAL，三个特性就足够支撑一个中小规模的事件存储。真正需要提前设计的是事件版本号和重放语义，而不是数据库选型。</p>
+<p>我们把写入路径压到一次 INSERT，读取路径用覆盖索引，P99 稳定在三毫秒以内。</p>]]></description>
+    </item>
+    <item>
+      <title>旧文：一次线上事故复盘</title>
+      <link>https://tech.example.com/2026/10/incident-review.html</link>
+      <guid isPermaLink="false">tech-2026-c</guid>
+      <pubDate>Tue, 20 Oct 2026 06:00:00 GMT</pubDate>
+      <atom:updated>2026-10-21T10:00:00+08:00</atom:updated>
+      <description><![CDATA[<p>事故的根因是一个没有上限的重试循环。复盘之后我们把重试预算和熔断阈值写进了发布检查清单。</p>]]></description>
+    </item>
+  </channel>
+</rss>

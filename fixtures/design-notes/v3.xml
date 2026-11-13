@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <title>设计手记</title>
+  <subtitle>界面、排版与交互的日常笔记</subtitle>
+  <link href="https://design.example.org/" rel="alternate"/>
+  <link href="https://design.example.org/feed.atom" rel="self"/>
+  <id>urn:uuid:design-notes-feed</id>
+  <updated>2026-11-14T13:00:00+08:00</updated>
+  <author><name>设计组</name></author>
+  <entry>
+    <title>排版里的呼吸感来自留白比例</title>
+    <link href="https://design.example.org/2026/10/whitespace.html" rel="alternate"/>
+    <id>tag:design.example.org,2026:whitespace</id>
+    <published>2026-10-28T09:00:00+08:00</published>
+    <updated>2026-11-14T10:20:00+08:00</updated>
+    <summary>留白不是剩余空间，而是被主动分配的空间。</summary>
+    <content type="html"><![CDATA[<p>留白不是剩余空间，而是被主动分配的空间。行距、段距、页边距三者之间应该保持一个可复述的比例关系。</p>
+<p>我们通常以正文行高为基准单位：段距取一到一点五倍行高，页边距取两到三倍行高。</p>
+<p>补充：在移动端把页边距压缩到一倍行高时，这个比例关系会失效，此时改用单栏和分组标题来维持层次。</p>]]></content>
+  </entry>
+  <entry>
+    <title>按钮状态的表达优先级</title>
+    <link href="https://design.example.org/2026/11/buttons.html" rel="alternate"/>
+    <id>tag:design.example.org,2026:buttons</id>
+    <published>2026-11-04T10:00:00+08:00</published>
+    <updated>2026-11-04T10:00:00+08:00</updated>
+    <summary>悬停、按下、禁用三种状态可以分别用亮度、位移和透明度表达。</summary>
+    <content type="html"><![CDATA[<p>按钮的悬停、按下、禁用三种状态，如果全部依赖色相变化，在色弱用户眼里会退化成同一种状态。</p>
+<p>更稳妥的做法是三种不同的视觉通道：悬停换亮度，按下给一点位移，禁用降低透明度。</p>]]></content>
+  </entry>
+  <entry>
+    <title>空状态页面的写法</title>
+    <link href="https://design.example.org/2026/11/empty-states.html" rel="alternate"/>
+    <published>2026-11-12T15:00:00+08:00</published>
+    <updated>2026-11-12T15:00:00+08:00</updated>
+    <summary>空状态要回答三个问题：为什么是空的、能做什么、做不了时怎么办。</summary>
+    <content type="html"><![CDATA[<p>空状态要回答三个问题：为什么是空的、现在能做什么、做不了时还有什么退路。只贴一张插画和一句“暂无数据”，三个问题都没有回答。</p>]]></content>
+  </entry>
+</feed>

@@ -1,0 +1,54 @@
+{
+  "slug": "error-lab",
+  "title": "故障实验室",
+  "topic": "运维",
+  "description": "专门制造坏 XML、异常日期、空正文、404 与 500，用来验证单源失败隔离与诊断。",
+  "default_version": "v1",
+  "versions": [
+    {
+      "id": "v1",
+      "label": "v1 · 坏 XML",
+      "file": "v1.xml",
+      "etag": "\"error-lab-v1\"",
+      "last_modified": "Thu, 12 Nov 2026 01:00:00 GMT",
+      "status": 200,
+      "notes": "未闭合标签，整份文档无法解析。"
+    },
+    {
+      "id": "v2",
+      "label": "v2 · 异常日期与空正文",
+      "file": "v2.xml",
+      "etag": "\"error-lab-v2\"",
+      "last_modified": "Thu, 12 Nov 2026 02:00:00 GMT",
+      "status": 200,
+      "notes": "一条日期无法解析，一条正文为空，一条只有日期没有时间。"
+    },
+    {
+      "id": "v3",
+      "label": "v3 · 混合好条目",
+      "file": "v3.xml",
+      "etag": "\"error-lab-v3\"",
+      "last_modified": "Thu, 12 Nov 2026 03:00:00 GMT",
+      "status": 200,
+      "notes": "坏条目与一条健康条目并存，健康条目应当正常入库。"
+    },
+    {
+      "id": "v404",
+      "label": "v404 · HTTP 404",
+      "file": null,
+      "status": 404,
+      "etag": null,
+      "last_modified": null,
+      "notes": "源返回 404，应当记录错误并进入重试退避。"
+    },
+    {
+      "id": "v500",
+      "label": "v500 · HTTP 500",
+      "file": null,
+      "status": 500,
+      "etag": null,
+      "last_modified": null,
+      "notes": "源返回 500，其他源不受影响。"
+    }
+  ]
+}

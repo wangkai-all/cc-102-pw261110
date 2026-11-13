@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>故障实验室</title>
+    <link>https://errors.example.net/</link>
+    <description>坏 XML 演示</description>
+    <item>
+      <title>这一段永远不会被解析</title>
+      <link>https://errors.example.net/broken.html</link>
+      <guid>err-broken</guid>
+      <pubDate>Wed, 11 Nov 2026 04:00:00 GMT</pubDate>
+      <description><![CDATA[<p>下面的闭合标签写错了。</p>]]></description>
+    </item>
+  </channel>
+<!-- 注意：</channel> 在这里缺失 -->

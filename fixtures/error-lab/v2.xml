@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>故障实验室</title>
+    <link>https://errors.example.net/</link>
+    <description>异常日期与空正文演示</description>
+    <item>
+      <title>日期写成中文的条目</title>
+      <link>https://errors.example.net/bad-date.html</link>
+      <guid>err-bad-date</guid>
+      <pubDate>2026年11月11日 星期三</pubDate>
+      <description><![CDATA[<p>日期完全无法解析，不应该被当成今天。</p>]]></description>
+    </item>
+    <item>
+      <title>只有日期没有时间的条目</title>
+      <link>https://errors.example.net/date-only.html</link>
+      <guid>err-date-only</guid>
+      <pubDate>2026-11-11</pubDate>
+      <description><![CDATA[<p>缺少时区与时刻，属于歧义日期。</p>]]></description>
+    </item>
+    <item>
+      <title>正文为空的条目</title>
+      <link>https://errors.example.net/empty-body.html</link>
+      <guid>err-empty</guid>
+      <pubDate>Wed, 11 Nov 2026 05:00:00 GMT</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>只有图片的条目</title>
+      <link>https://errors.example.net/image-only.html</link>
+      <guid>err-image-only</guid>
+      <pubDate>Wed, 11 Nov 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://errors.example.net/diagram.png" alt="示意图">]]></description>
+    </item>
+  </channel>
+</rss>

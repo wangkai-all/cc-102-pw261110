@@ -1,0 +1,54 @@
+{
+  "slug": "tech-daily",
+  "title": "技术日报",
+  "topic": "技术",
+  "description": "RSS 2.0 演示源：换链接、改标题、补发旧文、同题不同文，以及只返回最近几篇。",
+  "default_version": "v1",
+  "versions": [
+    {
+      "id": "v1",
+      "label": "v1 · 初始三篇",
+      "file": "v1.xml",
+      "etag": "\"tech-daily-v1\"",
+      "last_modified": "Tue, 03 Nov 2026 02:00:00 GMT",
+      "status": 200,
+      "notes": "三个条目，均带稳定 guid。"
+    },
+    {
+      "id": "v2",
+      "label": "v2 · 补发 2019 年旧文",
+      "file": "v2.xml",
+      "etag": "\"tech-daily-v2\"",
+      "last_modified": "Fri, 13 Nov 2026 09:00:00 GMT",
+      "status": 200,
+      "notes": "新增一篇 2019 年发表的旧文；链接带上追踪参数。"
+    },
+    {
+      "id": "v3",
+      "label": "v3 · 换链接 / 改标题 / 截断",
+      "file": "v3.xml",
+      "etag": "\"tech-daily-v3\"",
+      "last_modified": "Sat, 14 Nov 2026 01:00:00 GMT",
+      "status": 200,
+      "notes": "A 文章换链接，B 只改标题，C 消失在最近几篇中，新增两篇同题不同文。"
+    },
+    {
+      "id": "v4",
+      "label": "v4 · A 正文实质修改",
+      "file": "v4.xml",
+      "etag": "\"tech-daily-v4\"",
+      "last_modified": "Sat, 14 Nov 2026 03:00:00 GMT",
+      "status": 200,
+      "notes": "A 正文新增一段；旧文的更新时间变化但正文未变。"
+    },
+    {
+      "id": "v5",
+      "label": "v5 · 原样重发",
+      "file": "v5.xml",
+      "etag": "\"tech-daily-v5\"",
+      "last_modified": "Sat, 14 Nov 2026 04:00:00 GMT",
+      "status": 200,
+      "notes": "内容与 v4 完全相同但 ETag 不同，用于验证重复更新不增长。"
+    }
+  ]
+}

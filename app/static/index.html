@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>主题阅读 · 订阅工作台</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="app" id="app">
+
+  <aside class="sidebar">
+    <header class="brand">
+      <div class="brand-mark" aria-hidden="true">◈</div>
+      <div>
+        <h1>主题阅读</h1>
+        <p>订阅 · 去重 · 修订追踪</p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>话题</h2>
+        <button class="link-btn" id="clear-filters">清除筛选</button>
+      </div>
+      <nav class="topic-list" id="topic-list" aria-label="话题筛选"></nav>
+    </section>
+
+    <section class="panel panel-grow">
+      <div class="panel-head">
+        <h2>订阅源</h2>
+        <button class="icon-btn" id="refresh-all" title="刷新全部订阅源">刷新全部</button>
+      </div>
+      <div class="feed-list" id="feed-list"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>录入订阅</h2>
+      </div>
+      <form id="add-feed-form" class="add-feed">
+        <input id="add-url" type="text" placeholder="https://example.com/feed.xml 或 fixture://tech-daily" autocomplete="off">
+        <div class="add-row">
+          <input id="add-topic" type="text" placeholder="话题（可选）" autocomplete="off">
+          <button class="primary" type="submit">添加</button>
+        </div>
+        <p class="hint" id="add-hint">支持 RSS 2.0 / Atom 1.0；本地演示源可用 <code>fixture://</code>。</p>
+        <button class="link-btn" type="button" id="preview-btn">先校验地址</button>
+        <div class="preview-box" id="preview-box" hidden></div>
+      </form>
+    </section>
+  </aside>
+
+  <main class="main">
+    <header class="toolbar">
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="搜索标题或摘要" autocomplete="off">
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="show-absent" checked>
+        <span>显示本轮未出现的旧文</span>
+      </label>
+      <div class="toolbar-spacer"></div>
+      <span class="auto-refresh" id="auto-refresh"></span>
+      <span class="selection-count" id="selection-count">未选择文章</span>
+      <button class="btn" id="export-json" disabled>导出 JSON</button>
+      <button class="btn" id="export-md" disabled>导出 Markdown</button>
+    </header>
+
+    <div class="content">
+      <section class="list-pane" aria-label="文章列表">
+        <div class="list-head">
+          <label class="check-all">
+            <input type="checkbox" id="check-all">
+            <span>全选</span>
+          </label>
+          <span id="list-summary" class="list-summary"></span>
+        </div>
+        <div id="entry-list" class="entry-list"></div>
+      </section>
+
+      <section class="detail-pane" id="detail-pane" aria-label="文章详情">
+        <div class="empty-state" id="empty-state">
+          <div class="empty-glyph" aria-hidden="true">◫</div>
+          <h3>选择一篇文章</h3>
+          <p>左侧按话题浏览。打开文章后可查看正文、发布时间、收录时间和历次修订，并能对比任意两次修订。</p>
+        </div>
+        <article id="entry-detail" class="entry-detail" hidden></article>
+      </section>
+    </div>
+  </main>
+</div>
+
+<div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+<div class="modal-backdrop" id="modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <header class="modal-head">
+      <h3 id="modal-title">修订对比</h3>
+      <button class="icon-btn" id="modal-close" aria-label="关闭">✕</button>
+    </header>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
